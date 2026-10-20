@@ -1,0 +1,14 @@
+{
+  "name": "soft-start-local-ai",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A local-first AI companion that turns an avoided task into one gentle first step.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

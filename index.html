@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ee" />
+    <meta name="description" content="A gentle, local AI companion for the task you've been putting off." />
+    <title>Soft Start — one small step</title>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Soft Start home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 28c1-7 4-12 11-14 5-1 9 1 11 5-5 0-8 2-10 5 4-1 8 0 10 3-6 7-16 7-22 1Z"/><path d="M17 14c-1-3 0-6 3-8 3 2 4 5 3 8M12 26c4-2 9-2 14 0"/></svg></span>
+        <span>soft start</span>
+      </a>
+      <div class="local-note"><span class="pulse-dot"></span> your thoughts stay here</div>
+    </header>
+
+    <main class="layout">
+      <section class="intro" aria-labelledby="headline">
+        <p class="eyebrow"><span class="sun-icon" aria-hidden="true">✳</span> a little less friction</p>
+        <h1 id="headline">You don’t have to<br />do it <em>all</em> right now.</h1>
+        <p class="lede">Tell me the thing you’ve been putting off. We’ll make the first step feel small enough to start.</p>
+        <div class="promise-row">
+          <span><span class="check">✓</span> Runs with a local model</span>
+          <span><span class="check">✓</span> No accounts, no cloud</span>
+        </div>
+      </section>
+
+      <section class="workbench" aria-label="Make a gentle plan">
+        <div class="card-topline"><span class="tiny-leaf" aria-hidden="true">✿</span><span>YOUR NEXT SMALL THING</span><span class="card-time">~ 5 min</span></div>
+        <form id="plan-form">
+          <label for="task">What’s been sitting on your mind?</label>
+          <textarea id="task" name="task" maxlength="400" placeholder="e.g. reply to that email, clear one corner of my desk…" required></textarea>
+          <div class="form-meta"><span>Just the headline is enough.</span><span id="char-count">0 / 400</span></div>
+
+          <fieldset class="energy-field">
+            <legend>How much energy do you have today?</legend>
+            <div class="energy-options">
+              <label class="energy-option"><input type="radio" name="energy" value="low" /><span class="energy-emoji">☁</span><span>Low</span></label>
+              <label class="energy-option"><input type="radio" name="energy" value="some" checked /><span class="energy-emoji">◒</span><span>Some</span></label>
+              <label class="energy-option"><input type="radio" name="energy" value="plenty" /><span class="energy-emoji">☼</span><span>Plenty</span></label>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button class="primary" type="submit"><span>Find my first step</span><span class="arrow" aria-hidden="true">↗</span></button>
+            <button class="sample-button" type="button" id="sample-button">Show me a sample</button>
+          </div>
+          <p class="form-footnote">The model runs on your computer. Soft Start never saves your task.</p>
+        </form>
+      </section>
+
+      <section id="result" class="result-card" aria-live="polite" aria-atomic="true" hidden></section>
+
+      <section class="how-it-works" aria-label="How Soft Start works">
+        <div class="how-heading"><span class="line"></span><span>SMALL IS A STRATEGY</span><span class="line"></span></div>
+        <div class="steps-row">
+          <div class="mini-step"><span class="mini-number">01</span><span>Pick one thing</span></div>
+          <span class="step-connector" aria-hidden="true">→</span>
+          <div class="mini-step"><span class="mini-number">02</span><span>Make it tiny</span></div>
+          <span class="step-connector" aria-hidden="true">→</span>
+          <div class="mini-step"><span class="mini-number">03</span><span>Start gently</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Made for slow mornings and stuck afternoons.</span>
+      <span>Open source <span aria-hidden="true">✦</span> Local AI</span>
+    </footer>
+  </body>
+</html>
